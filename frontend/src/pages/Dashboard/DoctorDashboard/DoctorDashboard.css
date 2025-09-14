@@ -1,0 +1,534 @@
+/* DoctorDashboard.css - Matching Patient Dashboard Style */
+
+/* Layout Styles */
+.doctor-dashboard-layout {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.dashboard-sider {
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(29, 35, 41, 0.05);
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.dashboard-content {
+  margin-left: 200px;
+  margin-top: 64px;
+  padding: 24px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 64px);
+}
+
+/* Header Styles */
+.ant-layout-header {
+  background: #fff;
+  padding: 0 24px;
+  height: 64px;
+  line-height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: fixed;
+  width: calc(100% - 200px);
+  z-index: 9;
+  left: 200px;
+  top: 0;
+}
+
+/* Card Styles */
+.dashboard-section-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dashboard-section-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.dashboard-section-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.dashboard-section-card .ant-card-head-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #262626;
+}
+
+.dashboard-section-card .ant-card-extra {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Cards */
+.dashboard-stats {
+  margin-bottom: 24px;
+}
+
+.dashboard-stats .ant-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+.dashboard-stats .ant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-stats .ant-statistic-title {
+  font-size: 14px;
+  color: #595959;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.dashboard-stats .ant-statistic-content {
+  font-size: 28px;
+  font-weight: 600;
+  color: #262626;
+}
+
+/* Table Styles */
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #262626;
+  padding: 16px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #fafafa !important;
+}
+
+.ant-table-pagination {
+  margin: 16px 0;
+}
+
+/* Menu Styles */
+.ant-menu {
+  border-right: none !important;
+  padding: 16px 8px;
+}
+
+.ant-menu-item {
+  margin: 4px 0 !important;
+  border-radius: 8px;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu-item-selected {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.ant-menu-item-selected .anticon {
+  color: white !important;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected):hover {
+  background-color: #e6f7ff;
+}
+
+/* Form Styles */
+.ant-form-item-label > label {
+  color: #262626;
+  font-weight: 500;
+}
+
+.ant-input, .ant-input-number, .ant-select-selector {
+  border-radius: 6px;
+}
+
+/* Button Styles */
+.ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+/* Alert Styles */
+.ant-alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Progress Bar Styles */
+.ant-progress-line {
+  border-radius: 0;
+}
+
+.ant-progress-inner {
+  border-radius: 0;
+}
+
+/* Tag Styles */
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 2px 8px;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 88px 16px 16px;
+  }
+  
+  .dashboard-sider {
+    display: none;
+  }
+  
+  .ant-layout-header {
+    width: 100%;
+    left: 0;
+  }
+  
+  .dashboard-stats .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 80px 12px 12px;
+  }
+  
+  .dashboard-section-card .ant-card-head {
+    padding: 0 16px;
+  }
+  
+  .dashboard-section-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  .ant-statistic-content {
+    font-size: 24px;
+  }
+  
+  .ant-layout-header {
+    padding: 0 16px;
+  }
+}
+
+/* Custom Colors */
+.health-risk-high {
+  color: #ff4d4f;
+}
+
+.health-risk-medium {
+  color: #faad14;
+}
+
+.health-risk-low {
+  color: #52c41a;
+}
+
+/* Badge Styles */
+.ant-badge-count {
+  box-shadow: none;
+  font-weight: 600;
+}
+
+/* Divider Styles */
+.ant-divider-horizontal {
+  margin: 20px 0;
+}
+
+/* Tabs Styles */
+.ant-tabs-tab {
+  font-weight: 500;
+}
+
+.ant-tabs-tab-active {
+  font-weight: 600;
+}
+
+.ant-tabs-ink-bar {
+  height: 3px;
+  border-radius: 3px;
+}
+
+/* List Styles */
+.ant-list-item {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-list-item:last-child {
+  border-bottom: none;
+}
+
+.ant-list-item-meta-title {
+  font-weight: 500;
+  color: #262626;
+}
+
+.ant-list-item-meta-description {
+  color: #595959;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation for alerts */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.critical-alert {
+  animation: pulse 2s infinite;
+}
+
+/* Custom classes for health status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-good {
+  background-color: #52c41a;
+}
+
+.status-warning {
+  background-color: #faad14;
+}
+
+.status-critical {
+  background-color: #ff4d4f;
+}
+
+/* Additional utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid improvements */
+.ant-row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.ant-row > div {
+  padding: 8px;
+}
+
+/* Icon enhancements */
+.anticon {
+  vertical-align: middle;
+}
+
+/* Modal improvements */
+.ant-modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-modal-content {
+  border-radius: 12px;
+}
+
+.ant-modal-header {
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  padding: 16px 24px;
+}
+
+.ant-modal-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+.ant-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Doctor-specific styles */
+.patient-table {
+  margin-top: 16px;
+}
+
+.patient-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+}
+
+.patient-table .ant-table-tbody > tr > td {
+  transition: all 0.3s;
+}
+
+.patient-table .ant-table-tbody > tr:hover > td {
+  background: rgba(24, 144, 255, 0.1);
+}
+
+.last-checked {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.alerts-placeholder {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .dashboard-sider {
+    width: 80px !important;
+    min-width: 80px !important;
+  }
+  
+  .dashboard-title {
+    display: none;
+  }
+  
+  .dashboard-menu .ant-menu-item {
+    padding: 0 24px !important;
+    text-align: center;
+  }
+  
+  .dashboard-menu .ant-menu-item span {
+    display: none;
+  }
+  
+  .dashboard-header {
+    width: calc(100% - 80px);
+  }
+  
+  .dashboard-content {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-sider {
+    display: none;
+  }
+  
+  .dashboard-header {
+    width: 100%;
+  }
+  
+  .dashboard-content {
+    margin-left: 0;
+  }
+}
+
+/* Voice IVR Styles */
+.ivr-menu-option {
+  transition: all 0.3s ease;
+}
+
+.ivr-menu-option:hover {
+  background-color: #f0f5ff;
+  transform: translateX(5px);
+}
+
+.ivr-call-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.ivr-control-panel {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+}

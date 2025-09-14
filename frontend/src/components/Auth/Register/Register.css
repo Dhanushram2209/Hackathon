@@ -1,0 +1,274 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #baf1ff 0%, #dfbeff 100%);
+  padding: 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 20px 0;
+}
+
+.register-title {
+  color: #1890ff;
+  margin-bottom: 5px !important;
+  font-weight: 600;
+}
+
+.register-subtitle {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.register-form {
+  padding: 0 20px;
+}
+
+/* Form item labels */
+.register-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: #333;
+  height: auto !important;
+}
+
+/* Input fields styling - FIXED ALIGNMENT */
+.register-form .ant-input,
+.register-form .ant-input-affix-wrapper,
+.register-form .ant-select-selector,
+.register-form .ant-picker {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* Fix prefix icon alignment */
+.register-form .ant-input-affix-wrapper {
+  padding: 0 11px;
+}
+
+.register-form .ant-input-affix-wrapper .ant-input-prefix,
+.register-form .ant-input-affix-wrapper .ant-input-suffix {
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+
+.register-form .ant-input-affix-wrapper .ant-input {
+  height: 43px;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin-left: 8px;
+}
+
+/* Remove extra spacing from prefix icons */
+.register-form .ant-input-affix-wrapper-focused .ant-input,
+.register-form .ant-input-affix-wrapper:hover .ant-input {
+  margin-left: 8px;
+}
+
+/* TextArea specific styling - FIXED ALIGNMENT */
+.register-form .ant-input-textarea {
+  border-radius: 8px;
+}
+
+.register-form .ant-input-textarea textarea {
+  min-height: 80px;
+  border-radius: 8px;
+  resize: vertical;
+  padding: 8px 12px;
+  line-height: 1.5;
+}
+
+/* Fix textarea prefix alignment */
+.register-form .ant-input-textarea .ant-input-prefix {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #999;
+}
+
+.register-form .ant-input-textarea .ant-input {
+  padding-left: 30px !important;
+}
+
+/* Select dropdown styling */
+.register-form .ant-select-selector {
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+}
+
+.register-form .ant-select-selection-placeholder,
+.register-form .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+}
+
+.register-form .ant-select-dropdown {
+  border-radius: 8px;
+}
+
+.register-form .ant-select-item-option-selected {
+  background-color: #e6f7ff;
+}
+
+/* Date picker styling */
+.register-form .ant-picker {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+}
+
+/* Button styling */
+.register-button {
+  height: 45px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s;
+  background: linear-gradient(90deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(24, 144, 255, 0.4);
+  background: linear-gradient(90deg, #40a9ff 0%, #1890ff 100%);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+/* Form item spacing - IMPROVED */
+.register-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.register-form .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Row and column spacing */
+.register-form .ant-row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.register-form .ant-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Footer styling */
+.register-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #1890ff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.register-link:hover {
+  color: #096dd9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-card {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+  
+  .register-form {
+    padding: 0 15px;
+  }
+  
+  .register-header {
+    padding: 15px 15px 0;
+  }
+  
+  .register-form .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .register-form .ant-col:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Stack columns on mobile */
+  .register-form .ant-row .ant-col {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 10px;
+  }
+  
+  .register-card {
+    margin: 0;
+  }
+  
+  .register-title {
+    font-size: 20px !important;
+  }
+  
+  .register-subtitle {
+    font-size: 14px;
+  }
+  
+  .register-form .ant-input,
+  .register-form .ant-input-affix-wrapper,
+  .register-form .ant-select-selector,
+  .register-form .ant-picker {
+    height: 42px;
+    font-size: 13px;
+  }
+  
+  .register-button {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+

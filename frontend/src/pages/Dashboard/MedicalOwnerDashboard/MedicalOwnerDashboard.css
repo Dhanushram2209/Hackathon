@@ -1,0 +1,745 @@
+/* MedicalOwnerDashboard.css - Unified Style with Patient Dashboard */
+
+/* Layout Styles */
+.medical-owner-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.dashboard-sider {
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(29, 35, 41, 0.05);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.dashboard-content {
+  margin-left: 50px;
+  margin-top: 64px;
+  padding: 24px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 64px);
+}
+
+/* Header Styles */
+.ant-layout-header {
+  background: #fff;
+  padding: 0 24px;
+  height: 64px;
+  line-height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: fixed;
+  width: calc(100% - 200px);
+  z-index: 99;
+  left: 200px;
+  top: 0;
+}
+
+/* Card Styles */
+.dashboard-section-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dashboard-section-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.dashboard-section-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.dashboard-section-card .ant-card-head-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #262626;
+}
+
+.dashboard-section-card .ant-card-extra {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Cards */
+.dashboard-stats {
+  margin-bottom: 24px;
+}
+
+.dashboard-stats .ant-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+.dashboard-stats .ant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-stats .ant-statistic-title {
+  font-size: 14px;
+  color: #595959;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.dashboard-stats .ant-statistic-content {
+  font-size: 28px;
+  font-weight: 600;
+  color: #262626;
+}
+
+/* Table Styles */
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #262626;
+  padding: 16px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #fafafa !important;
+}
+
+.ant-table-pagination {
+  margin: 16px 0;
+}
+
+/* Menu Styles */
+.ant-menu {
+  border-right: none !important;
+  padding: 16px 8px;
+}
+
+.ant-menu-item {
+  margin: 4px 0 !important;
+  border-radius: 8px;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu-item-selected {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.ant-menu-item-selected .anticon {
+  color: white !important;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected):hover {
+  background-color: #e6f7ff;
+}
+
+/* Form Styles */
+.ant-form-item-label > label {
+  color: #262626;
+  font-weight: 500;
+}
+
+.ant-input, .ant-input-number, .ant-select-selector {
+  border-radius: 6px;
+}
+
+/* Button Styles */
+.ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+/* Alert Styles */
+.ant-alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Progress Bar Styles */
+.ant-progress-line {
+  border-radius: 0;
+}
+
+.ant-progress-inner {
+  border-radius: 0;
+}
+
+/* Tag Styles */
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 2px 8px;
+}
+
+/* NEW: Improved Responsive Grid for Middle Screens */
+@media (max-width: 1199px) and (min-width: 993px) {
+  /* Medium desktop adjustments */
+  .dashboard-content {
+    margin-left: 180px;
+    padding: 20px;
+  }
+  
+  .ant-layout-header {
+    width: calc(100% - 180px);
+    left: 180px;
+    padding: 0 20px;
+  }
+  
+  .dashboard-stats .ant-statistic-content {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Tablet breakpoint */
+  .dashboard-content {
+    margin-left: 0;
+    padding: 88px 16px 16px;
+  }
+  
+  .dashboard-sider {
+    display: none;
+  }
+  
+  .ant-layout-header {
+    width: 100%;
+    left: 0;
+    padding: 0 16px;
+  }
+  
+  .dashboard-stats .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  /* Improve card layout for tablets */
+  .dashboard-section-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  /* Better table responsiveness */
+  .ant-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile breakpoint */
+  .dashboard-content {
+    padding: 80px 12px 12px;
+  }
+  
+  .dashboard-section-card .ant-card-head {
+    padding: 0 16px;
+  }
+  
+  .dashboard-section-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .ant-statistic-content {
+    font-size: 22px;
+  }
+  
+  .ant-layout-header {
+    padding: 0 12px;
+  }
+  
+  /* Stack buttons on mobile */
+  .ant-btn-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ant-btn-group > .ant-btn {
+    margin: 0;
+  }
+}
+
+/* NEW: Specific adjustments for middle screens (768px - 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .dashboard-content {
+    padding: 84px 20px 20px;
+  }
+  
+  /* Two-column layout for stats on tablets */
+  .dashboard-stats .ant-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Adjust card padding for medium screens */
+  .dashboard-section-card .ant-card-body {
+    padding: 18px;
+  }
+  
+  /* Better form layout */
+  .ant-form-item .ant-form-item-label,
+  .ant-form-item .ant-form-item-control {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Table improvements */
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+/* Custom Colors */
+.health-risk-high {
+  color: #ff4d4f;
+}
+
+.health-risk-medium {
+  color: #faad14;
+}
+
+.health-risk-low {
+  color: #52c41a;
+}
+
+/* Stats Cards */
+.stat-card {
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.stat-card .ant-statistic-title {
+  font-size: 14px;
+  color: #595959;
+  margin-bottom: 8px;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Badge Styles */
+.ant-badge-count {
+  box-shadow: none;
+  font-weight: 600;
+}
+
+/* Divider Styles */
+.ant-divider-horizontal {
+  margin: 20px 0;
+}
+
+/* Tabs Styles */
+.ant-tabs-tab {
+  font-weight: 500;
+}
+
+.ant-tabs-tab-active {
+  font-weight: 600;
+}
+
+.ant-tabs-ink-bar {
+  height: 3px;
+  border-radius: 3px;
+}
+
+/* List Styles */
+.ant-list-item {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-list-item:last-child {
+  border-bottom: none;
+}
+
+.ant-list-item-meta-title {
+  font-weight: 500;
+  color: #262626;
+}
+
+.ant-list-item-meta-description {
+  color: #595959;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation for alerts */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.critical-alert {
+  animation: pulse 2s infinite;
+}
+
+/* Custom classes for status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-good {
+  background-color: #52c41a;
+}
+
+.status-warning {
+  background-color: #faad14;
+}
+
+.status-critical {
+  background-color: #ff4d4f;
+}
+
+/* Medical Store Cards */
+.store-card {
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.store-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Modal improvements */
+.ant-modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-modal-content {
+  border-radius: 12px;
+}
+
+.ant-modal-header {
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  padding: 16px 24px;
+}
+
+.ant-modal-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+.ant-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Additional utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid improvements */
+.ant-row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.ant-row > div {
+  padding: 8px;
+}
+
+/* Icon enhancements */
+.anticon {
+  vertical-align: middle;
+}
+
+/* Medical specific styles */
+.low-stock-config {
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.low-stock-config .ant-input-number {
+  width: 100%;
+}
+
+/* Print styles */
+@media print {
+  .medical-owner-dashboard {
+    background: #fff;
+  }
+  
+  .dashboard-sider, .ant-layout-header, .ant-float-btn {
+    display: none;
+  }
+  
+  .dashboard-content {
+    margin-left: 0;
+    padding: 0;
+  }
+  
+  .ant-card {
+    border: none;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}
+
+/* Float Button */
+.ant-float-btn {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  bottom: 100px;
+  right: 24px;
+}
+
+.ant-float-btn-circle {
+  width: 60px;
+  height: 60px;
+}
+
+.ant-float-btn-icon {
+  font-size: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-section-card .ant-card-extra {
+    padding-top: 8px;
+    float: none;
+    text-align: left;
+  }
+  
+  .ant-float-btn {
+    bottom: 80px;
+    right: 16px;
+  }
+}
+
+/* Loading container styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+}
+
+/* Sider footer styles */
+.sider-footer {
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Dashboard content layout */
+.dashboard-content-layout {
+  margin-left: 200px;
+  transition: margin-left 0.2s;
+}
+
+/* Responsive adjustments for dashboard content layout */
+@media (max-width: 992px) {
+  .dashboard-content-layout {
+    margin-left: 0;
+  }
+}
+
+/* Fix for dashboard sections spacing */
+.dashboard-sections {
+  margin-top: 24px;
+}
+
+/* Improved table responsiveness */
+.ant-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Button group spacing */
+.ant-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* Form item spacing improvements */
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+/* Card body padding consistency */
+.ant-card-body {
+  padding: 20px;
+}
+
+/* Menu item icon spacing */
+.ant-menu-item .anticon {
+  margin-right: 8px;
+}
+
+/* Status tag improvements */
+.status-tag {
+  border: none;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+/* Improved mobile responsiveness for tables */
+@media (max-width: 576px) {
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 8px;
+  }
+  
+  .ant-table-tbody > tr > td {
+    font-size: 12px;
+  }
+  
+  .ant-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Fix for modal form buttons alignment */
+.ant-modal-footer .ant-btn {
+  margin-left: 8px;
+}
+
+/* Improved list item actions */
+.ant-list-item-action {
+  margin-left: 16px;
+}
+
+/* Custom spacing for dashboard elements */
+.dashboard-spacing {
+  margin-bottom: 24px;
+}
+
+/* Text ellipsis for long content */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Improved select dropdowns */
+.ant-select-dropdown {
+  border-radius: 8px;
+}
+
+/* Input group improvements */
+.ant-input-group {
+  border-radius: 6px;
+}
+
+/* Avatar size consistency */
+.ant-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
